@@ -47,7 +47,7 @@
 }
 
 .highlight {
-  background: linear-gradient(135deg, #b175e8 0%, #8a2be2 100%);
+  background: linear-gradient(135deg, #EDE8D0 0%, #D4CEB0 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -106,7 +106,7 @@
   transform: translate(-50%, -50%);
   width: 600px;
   height: 600px;
-  background: radial-gradient(circle, rgba(138, 43, 226, 0.15) 0%, rgba(0, 0, 0, 0) 70%);
+  background: radial-gradient(circle, rgba(237, 232, 208, 0.15) 0%, rgba(0, 0, 0, 0) 70%);
   z-index: 1;
   pointer-events: none;
 }

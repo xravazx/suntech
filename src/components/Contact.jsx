@@ -6,7 +6,7 @@ const Contact = () => {
   return (
     <section id="contact" className={`section-padding ${styles.contactSection}`}>
       <div className={`container ${styles.container}`}>
-        <div className={styles.info}>
+        <div className={styles.info} data-aos="fade-right">
           <h2 className={styles.title}>¿Listo para optimizar tu sistema?</h2>
           <p className={styles.subtitle}>
             Ya sea que necesites una reparación urgente, mantenimiento o el desarrollo de una nueva aplicación, estamos aquí para ayudarte.
@@ -28,7 +28,7 @@ const Contact = () => {
           </div>
         </div>
 
-        <div className={`${styles.formWrapper} glass`}>
+        <div className={`${styles.formWrapper} glass`} data-aos="fade-left" data-aos-delay="200">
           <form className={styles.form}>
             <div className={styles.inputGroup}>
               <label htmlFor="name">Nombre</label>

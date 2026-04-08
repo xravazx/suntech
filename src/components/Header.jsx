@@ -5,7 +5,9 @@ const Header = () => {
   return (
     <header className={`${styles.header} glass`}>
       <div className={`container ${styles.headerContent}`}>
-        <div className={styles.logo}>Nyxus</div>
+        <a href="#hero" className={styles.logo}>
+          <img src="/logo.png" alt="Nyxus" className={styles.logoImg} />
+        </a>
         <nav className={styles.nav}>
           <a href="#hero">Inicio</a>
           <a href="#services">Servicios</a>

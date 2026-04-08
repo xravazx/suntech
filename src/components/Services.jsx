@@ -39,7 +39,7 @@ const Services = () => {
   return (
     <section id="services" className={`section-padding ${styles.servicesSection}`}>
       <div className="container">
-        <div className={styles.header}>
+        <div className={styles.header} data-aos="fade-up">
           <h2 className={styles.sectionTitle}>Nuestros Servicios</h2>
           <p className={styles.sectionSubtitle}>
             Un ecosistema de soluciones tecnológicas diseñadas para maximizar tu productividad y tranquilidad.
@@ -48,7 +48,12 @@ const Services = () => {
 
         <div className={styles.grid}>
           {services.map((service, index) => (
-            <div key={index} className={`${styles.card} glass`}>
+            <div 
+              key={index} 
+              className={`${styles.card} glass`}
+              data-aos="fade-up"
+              data-aos-delay={index * 100}
+            >
               <div className={styles.iconWrapper}>
                 {service.icon}
               </div>

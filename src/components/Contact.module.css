@@ -96,7 +96,7 @@
 
 .submitBtn {
   background: var(--accent-color);
-  color: #fff;
+  color: var(--bg-color);
   padding: 1rem;
   border-radius: 12px;
   font-weight: 600;

@@ -24,7 +24,7 @@ const Features = () => {
   return (
     <section id="features" className={`section-padding ${styles.featuresSection}`}>
       <div className={`container ${styles.container}`}>
-        <div className={styles.content}>
+        <div className={styles.content} data-aos="fade-right">
           <h2 className={styles.title}>Por qué elegir NYXUS</h2>
           <p className={styles.subtitle}>
             Nuestro compromiso es ofrecer un servicio premium con componentes de la más alta calidad y un código robusto.
@@ -32,7 +32,12 @@ const Features = () => {
         </div>
         <div className={styles.grid}>
           {features.map((item, index) => (
-            <div key={index} className={styles.featureItem}>
+            <div 
+              key={index} 
+              className={styles.featureItem}
+              data-aos="fade-left"
+              data-aos-delay={index * 150}
+            >
               <div className={styles.icon}>{item.icon}</div>
               <div>
                 <h4 className={styles.featureTitle}>{item.title}</h4>

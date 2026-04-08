@@ -16,20 +16,20 @@
 }
 
 .logo {
-  font-size: 1.5rem;
-  font-weight: 700;
-  color: var(--text-primary);
   margin-bottom: 1rem;
   display: flex;
-  align-items: baseline;
+  align-items: center;
+  transition: opacity 0.2s ease;
 }
 
-.dot {
-  width: 6px;
-  height: 6px;
-  background-color: var(--accent-color);
-  border-radius: 50%;
-  margin-left: 2px;
+.logo:hover {
+  opacity: 0.8;
+}
+
+.logoImg {
+  height: 40px;
+  width: auto;
+  filter: invert(1) brightness(2);
 }
 
 .description {

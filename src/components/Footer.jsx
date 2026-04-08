@@ -6,7 +6,9 @@ const Footer = () => {
     <footer className={styles.footer}>
       <div className={`container ${styles.container}`}>
         <div className={styles.brand}>
-          <div className={styles.logo}>Nyxus</div>
+          <a href="#hero" className={styles.logo}>
+            <img src="/logo.png" alt="Nyxus" className={styles.logoImg} />
+          </a>
           <p className={styles.description}>
             Excelencia en servicios de TI, soporte técnico avanzado y desarrollo de software para potenciar tu negocio.
           </p>
@@ -24,6 +26,12 @@ const Footer = () => {
             <a href="#">Nosotros</a>
             <a href="#">Contacto</a>
             <a href="#">Privacidad</a>
+          </div>
+          <div className={styles.linkColumn}>
+            <h4>Social</h4>
+            <a href="https://www.instagram.com/https.nyxus.zzz?igsh=aDBjbXltMXlla2Zv" target="_blank" rel="noopener noreferrer">
+              Instagram
+            </a>
           </div>
         </div>
       </div>

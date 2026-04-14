@@ -1,8 +1,37 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Mail, MessageCircle, Phone } from 'lucide-react';
 import styles from './Contact.module.css';
 
 const Contact = () => {
+  const [status, setStatus] = useState(''); // '', 'loading', 'success', 'error'
+  
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setStatus('loading');
+    
+    const form = e.target;
+    const data = new FormData(form);
+    
+    try {
+      const response = await fetch('https://formspree.io/f/mqaeajob', {
+        method: 'POST',
+        body: data,
+        headers: {
+          'Accept': 'application/json'
+        }
+      });
+      
+      if (response.ok) {
+        setStatus('success');
+        form.reset();
+      } else {
+        setStatus('error');
+      }
+    } catch (error) {
+      setStatus('error');
+    }
+  };
+
   return (
     <section id="contact" className={`section-padding ${styles.contactSection}`}>
       <div className={`container ${styles.container}`}>
@@ -29,22 +58,33 @@ const Contact = () => {
         </div>
 
         <div className={`${styles.formWrapper} glass`} data-aos="fade-left" data-aos-delay="200">
-          <form className={styles.form}>
+          <form className={styles.form} onSubmit={handleSubmit}>
             <div className={styles.inputGroup}>
               <label htmlFor="name">Nombre</label>
-              <input type="text" id="name" placeholder="Tu nombre o empresa" />
+              <input type="text" id="name" name="name" placeholder="Tu nombre o empresa" required />
             </div>
             <div className={styles.inputGroup}>
               <label htmlFor="email">Correo Electrónico</label>
-              <input type="email" id="email" placeholder="tucorreo@ejemplo.com" />
+              <input type="email" id="email" name="email" placeholder="tucorreo@ejemplo.com" required />
             </div>
             <div className={styles.inputGroup}>
               <label htmlFor="message">¿En qué podemos ayudarte?</label>
-              <textarea id="message" rows="4" placeholder="Describe brevemente el problema o proyecto..."></textarea>
+              <textarea id="message" name="message" rows="4" placeholder="Describe brevemente el problema o proyecto..." required></textarea>
             </div>
-            <button type="button" className={styles.submitBtn}>
-              Enviar Mensaje
+            <button type="submit" className={styles.submitBtn} disabled={status === 'loading'}>
+              {status === 'loading' ? 'Enviando...' : 'Enviar Mensaje'}
             </button>
+            
+            {status === 'success' && (
+              <div className={`${styles.statusMessage} ${styles.success}`}>
+                ¡Mensaje enviado con éxito! Nos pondremos en contacto pronto.
+              </div>
+            )}
+            {status === 'error' && (
+              <div className={`${styles.statusMessage} ${styles.error}`}>
+                Hubo un error al enviar el mensaje. Por favor, intenta de nuevo o contáctanos por WhatsApp.
+              </div>
+            )}
           </form>
         </div>
       </div>

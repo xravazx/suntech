@@ -4,8 +4,9 @@ import 'aos/dist/aos.css';
 
 import Header from './components/Header';
 import Hero from './components/Hero';
-import Services from './components/Services';
 import Features from './components/Features';
+import Showcase from './components/Showcase';
+import Testimonials from './components/Testimonials';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 import CustomCursor from './components/CustomCursor';
@@ -27,7 +28,9 @@ function App() {
       <main>
         <Hero />
         <Features />
+        <Showcase />
         <Services />
+        <Testimonials />
         <Contact />
       </main>
       <Footer />

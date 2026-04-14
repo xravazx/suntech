@@ -1,0 +1,104 @@
+.testimonialsSection {
+  background: var(--bg-color);
+  border-top: 1px solid var(--border-color);
+}
+
+.header {
+  margin-bottom: 3rem;
+}
+
+.title {
+  font-size: 2.5rem;
+}
+
+.logContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.logCard {
+  background: var(--surface-color);
+  border: 1px solid var(--border-color);
+  padding: 1.5rem;
+  position: relative;
+  transition: all 0.2s ease;
+}
+
+.logCard:hover {
+  border-color: var(--accent-color);
+  background: rgba(255, 230, 0, 0.03);
+}
+
+.logHeader {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+  margin-bottom: 1.2rem;
+}
+
+.iconWrapper {
+  color: var(--accent-color);
+  background: rgba(255, 230, 0, 0.1);
+  padding: 0.8rem;
+  border-radius: 4px;
+}
+
+.logMeta {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.userName {
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+
+.userCompany {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.75rem;
+  color: var(--text-secondary);
+}
+
+.statusDot {
+  width: 8px;
+  height: 8px;
+  background: #28a745;
+  border-radius: 50%;
+  box-shadow: 0 0 10px #28a745;
+}
+
+.logBody {
+  margin-bottom: 1.2rem;
+}
+
+.text {
+  font-size: 1.05rem;
+  line-height: 1.5;
+  color: var(--text-primary);
+  font-style: italic;
+}
+
+.logFooter {
+  display: flex;
+  justify-content: space-between;
+  border-top: 1px dashed var(--border-color);
+  padding-top: 1rem;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.65rem;
+  color: var(--text-secondary);
+}
+
+.verified {
+  color: var(--accent-color);
+  font-weight: bold;
+}
+
+@media (max-width: 600px) {
+  .logHeader {
+    flex-wrap: wrap;
+  }
+}

@@ -54,6 +54,7 @@ const Services = () => {
               data-aos="fade-up"
               data-aos-delay={index * 100}
             >
+              <div className="mono-label">[0{index + 1}]</div>
               <div className={styles.iconWrapper}>
                 {service.icon}
               </div>

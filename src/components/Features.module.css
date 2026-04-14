@@ -1,49 +1,27 @@
 .featuresSection {
-  background-color: var(--surface-color);
+  background-color: var(--bg-color);
   border-top: 1px solid var(--border-color);
-  border-bottom: 1px solid var(--border-color);
-}
-
-.container {
-  display: flex;
-  gap: 4rem;
-  align-items: center;
-}
-
-.content {
-  flex: 1;
 }
 
 .title {
-  font-size: 2.2rem;
-  margin-bottom: 1rem;
+  font-size: 3rem;
+  margin-bottom: 1.5rem;
+  letter-spacing: -0.04em;
 }
 
 .subtitle {
+  font-family: 'JetBrains Mono', monospace;
   color: var(--text-secondary);
-  font-size: 1.1rem;
-  line-height: 1.6;
-}
-
-.grid {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  gap: 2.5rem;
-}
-
-.featureItem {
-  display: flex;
-  gap: 1.5rem;
-  align-items: flex-start;
+  font-size: 0.9rem;
+  line-height: 1.8;
 }
 
 .icon {
-  background: var(--bg-color);
-  color: var(--accent-color);
-  min-width: 48px;
-  height: 48px;
-  border-radius: 12px;
+  background: var(--surface-color);
+  color: var(--text-primary);
+  min-width: 50px;
+  height: 50px;
+  border-radius: 0px; /* Sharp corners */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -51,13 +29,17 @@
 }
 
 .featureTitle {
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   margin-bottom: 0.5rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
 }
 
 .featureDesc {
+  font-family: 'JetBrains Mono', monospace;
   color: var(--text-secondary);
-  font-size: 0.95rem;
+  font-size: 0.85rem;
+  line-height: 1.6;
 }
 
 @media (max-width: 900px) {

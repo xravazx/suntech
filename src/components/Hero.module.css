@@ -37,30 +37,32 @@
 }
 
 .title {
-  font-size: 4.5rem;
-  line-height: 1.1;
-  font-weight: 700;
-  margin-bottom: 1.5rem;
+  font-size: 5rem;
+  line-height: 0.9;
+  font-weight: 800;
+  margin-bottom: 2rem;
   color: var(--text-primary);
   animation-delay: 0.2s;
-  letter-spacing: -0.04em;
+  letter-spacing: -0.05em;
+  text-transform: uppercase;
 }
 
 .highlight {
-  background: linear-gradient(135deg, #EDE8D0 0%, #D4CEB0 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+  color: var(--text-primary);
+  opacity: 0.4;
+  display: block;
 }
 
 .subtitle {
-  font-size: 1.25rem;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 1rem;
   color: var(--text-secondary);
-  margin-bottom: 3rem;
+  margin-bottom: 3.5rem;
   max-width: 600px;
   margin-left: auto;
   margin-right: auto;
   animation-delay: 0.3s;
+  line-height: 1.8;
 }
 
 .actions {
@@ -71,21 +73,24 @@
 }
 
 .primaryBtn, .secondaryBtn {
-  padding: 1rem 2rem;
-  border-radius: 30px;
-  font-weight: 600;
-  font-size: 1rem;
-  transition: all 0.3s ease;
+  padding: 1.25rem 2.5rem;
+  border-radius: 0px; /* Sharp corners */
+  font-weight: 700;
+  font-size: 0.8rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  transition: all 0.2s ease;
 }
 
 .primaryBtn {
   background: var(--text-primary);
   color: var(--bg-color);
+  border: 1px solid var(--text-primary);
 }
 
 .primaryBtn:hover {
-  transform: translateY(-2px);
-  background: var(--text-secondary);
+  background: transparent;
+  color: var(--text-primary);
 }
 
 .secondaryBtn {
@@ -95,8 +100,7 @@
 }
 
 .secondaryBtn:hover {
-  background: rgba(255, 255, 255, 0.05);
-  transform: translateY(-2px);
+  border-color: var(--text-primary);
 }
 
 .glow {
@@ -104,9 +108,9 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 600px;
-  height: 600px;
-  background: radial-gradient(circle, rgba(237, 232, 208, 0.15) 0%, rgba(0, 0, 0, 0) 70%);
+  width: 1000px;
+  height: 1000px;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.05) 0%, rgba(0, 0, 0, 0) 70%);
   z-index: 1;
   pointer-events: none;
 }

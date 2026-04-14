@@ -11,7 +11,7 @@ const Hero = () => {
             <span className={styles.highlight}>Simplifica tu futuro.</span>
           </h1>
           <p className={`${styles.subtitle} animate-fade-in`}>
-            NYXUS ofrece soluciones especializadas en soporte técnico, reparación de hardware, mantenimiento y desarrollo de software a medida.
+            Sun Technology System ofrece soluciones especializadas en soporte técnico, reparación de hardware, mantenimiento y desarrollo de software a medida.
           </p>
           <div className={`${styles.actions} animate-fade-in`}>
             <a href="#services" className={styles.primaryBtn}>Explorar Servicios</a>

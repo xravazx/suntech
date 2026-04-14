@@ -1,4 +1,5 @@
 import React from 'react';
+import Logo from './Logo';
 import styles from './Header.module.css';
 
 const Header = () => {
@@ -6,7 +7,7 @@ const Header = () => {
     <header className={`${styles.header} glass`}>
       <div className={`container ${styles.headerContent}`}>
         <a href="#hero" className={styles.logo}>
-          <img src="/logo.png" alt="Nyxus" className={styles.logoImg} />
+          <Logo className={styles.headerLogo} />
         </a>
         <nav className={styles.nav}>
           <a href="#hero">Inicio</a>

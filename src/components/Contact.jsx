@@ -13,9 +13,9 @@ const Contact = () => {
           </p>
           
           <div className={styles.contactMethods}>
-            <a href="mailto:soporte@nyxus.com" className={styles.method}>
+            <a href="mailto:soporte@suntechsystem.com" className={styles.method}>
               <div className={styles.methodIcon}><Mail size={20} /></div>
-              <span>soporte@nyxus.com</span>
+              <span>soporte@suntechsystem.com</span>
             </a>
             <a href="tel:+529841586045" className={styles.method}>
               <div className={styles.methodIcon}><Phone size={20} /></div>

@@ -1,4 +1,5 @@
 import React from 'react';
+import Logo from './Logo';
 import styles from './Footer.module.css';
 
 const Footer = () => {
@@ -7,7 +8,7 @@ const Footer = () => {
       <div className={`container ${styles.container}`}>
         <div className={styles.brand}>
           <a href="#hero" className={styles.logo}>
-            <img src="/logo.png" alt="Nyxus" className={styles.logoImg} />
+            <Logo className={styles.footerLogo} />
           </a>
           <p className={styles.description}>
             Excelencia en servicios de TI, soporte técnico avanzado y desarrollo de software para potenciar tu negocio.
@@ -36,7 +37,7 @@ const Footer = () => {
         </div>
       </div>
       <div className={styles.copyright}>
-        <p>&copy; {new Date().getFullYear()} Nyxus. Todos los derechos reservados.</p>
+        <p>&copy; {new Date().getFullYear()} Sun Technology System. Todos los derechos reservados.</p>
       </div>
     </footer>
   );

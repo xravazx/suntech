@@ -1,12 +1,14 @@
 import React from 'react';
+import SectionMetadata from './SectionMetadata';
 import styles from './Hero.module.css';
 
 const Hero = () => {
   return (
     <section id="hero" className={styles.hero}>
+      <SectionMetadata label="CORE / INITIALIZE" position="top-right" />
       <div className={`container ${styles.heroContainer}`}>
         <div className={styles.content}>
-          <h1 className={`${styles.title} animate-fade-in`}>
+          <h1 className={`${styles.title} animate-fade-in glitch`}>
             Potencia tu tecnología. <br />
             <span className={styles.highlight}>Simplifica tu futuro.</span>
           </h1>

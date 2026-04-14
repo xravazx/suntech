@@ -30,7 +30,7 @@ const Footer = () => {
           </div>
           <div className={styles.linkColumn}>
             <h4>Social</h4>
-            <a href="https://www.instagram.com/https.nyxus.zzz?igsh=aDBjbXltMXlla2Zv" target="_blank" rel="noopener noreferrer">
+            <a href="https://www.instagram.com/https.sunsystems.zzz?igsh=cXNyNmN4bmtpaG5u" target="_blank" rel="noopener noreferrer">
               Instagram
             </a>
           </div>

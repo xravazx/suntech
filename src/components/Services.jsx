@@ -37,10 +37,11 @@ const services = [
 
 const Services = () => {
   return (
-    <section id="services" className={`section-padding ${styles.servicesSection}`}>
+    <section id="services" className={`section-padding ${styles.servicesSection}`} style={{ position: 'relative' }}>
+      <SectionMetadata label="UNITS / DEPLOY" position="top-left" />
       <div className="container">
         <div className={styles.header} data-aos="fade-up">
-          <h2 className={styles.sectionTitle}>Nuestros Servicios</h2>
+          <h2 className={`${styles.sectionTitle} glitch`}>Nuestros Servicios</h2>
           <p className={styles.sectionSubtitle}>
             Un ecosistema de soluciones tecnológicas diseñadas para maximizar tu productividad y tranquilidad.
           </p>

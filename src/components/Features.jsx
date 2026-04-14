@@ -22,10 +22,11 @@ const features = [
 
 const Features = () => {
   return (
-    <section id="features" className={`section-padding ${styles.featuresSection}`}>
+    <section id="features" className={`section-padding ${styles.featuresSection}`} style={{ position: 'relative' }}>
+      <SectionMetadata label="DATA / ANALYSIS" position="bottom-left" />
       <div className={`container ${styles.container}`}>
         <div className={styles.content} data-aos="fade-right">
-          <h2 className={styles.title}>Por qué elegir SUN</h2>
+          <h2 className={`${styles.title} glitch`}>Por qué elegir SUN</h2>
           <p className={styles.subtitle}>
             Nuestro compromiso es ofrecer un servicio premium con componentes de la más alta calidad y un código robusto.
           </p>

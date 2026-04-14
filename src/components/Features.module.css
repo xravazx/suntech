@@ -26,6 +26,12 @@
   align-items: center;
   justify-content: center;
   border: 1px solid var(--border-color);
+  transition: all 0.2s ease;
+}
+
+.featureItem:hover .icon {
+  border-color: var(--accent-color);
+  color: var(--accent-color);
 }
 
 .featureTitle {

@@ -19,11 +19,12 @@
   margin-bottom: 1rem;
   display: flex;
   align-items: center;
-  transition: opacity 0.2s ease;
+  transition: all 0.2s ease;
+  color: var(--text-primary);
 }
 
 .logo:hover {
-  opacity: 0.8;
+  color: var(--accent-color);
 }
 
 .logoImg {

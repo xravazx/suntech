@@ -35,11 +35,11 @@ const CustomCursor = () => {
           left: 0,
           width: '20px',
           height: '20px',
-          border: '1px solid #fff',
+          border: `1px solid ${isHovering ? '#00f2ff' : '#fff'}`,
           borderRadius: '50%',
           pointerEvents: 'none',
           zIndex: 10000,
-          transform: `translate(${position.x - 10}px, ${position.y - 10}px) scale(${isHovering ? 2 : 1})`,
+          transform: `translate(${position.x - 10}px, ${position.y - 10}px) scale(${isHovering ? 2.5 : 1})`,
           transition: 'transform 0.1s ease-out, border-color 0.2s',
           mixBlendMode: 'difference'
         }}
@@ -51,7 +51,7 @@ const CustomCursor = () => {
           left: 0,
           width: '4px',
           height: '4px',
-          backgroundColor: '#fff',
+          backgroundColor: '#00f2ff',
           borderRadius: '50%',
           pointerEvents: 'none',
           zIndex: 10000,

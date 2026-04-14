@@ -89,8 +89,9 @@
 }
 
 .primaryBtn:hover {
-  background: transparent;
-  color: var(--text-primary);
+  background: var(--accent-color);
+  border-color: var(--accent-color);
+  color: var(--bg-color);
 }
 
 .secondaryBtn {
@@ -100,7 +101,8 @@
 }
 
 .secondaryBtn:hover {
-  border-color: var(--text-primary);
+  border-color: var(--accent-color);
+  color: var(--accent-color);
 }
 
 .glow {

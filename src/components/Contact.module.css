@@ -34,29 +34,32 @@
   align-items: center;
   gap: 1rem;
   padding: 1rem;
-  border-radius: 12px;
-  background: rgba(255, 255, 255, 0.03);
-  border: 1px solid transparent;
+  border-radius: 0px; /* Sharp corners */
+  background: transparent;
+  border: 1px solid var(--border-color);
   transition: all 0.2s ease;
+  color: var(--text-primary);
 }
 
 .method:hover {
-  background: rgba(255, 255, 255, 0.05);
-  border-color: var(--border-color);
-}
-
-.methodIcon {
+  background: var(--surface-color);
+  border-color: var(--accent-color);
   color: var(--accent-color);
 }
 
-.whatsapp .methodIcon {
-  color: #25D366; /* WhatsApp color */
+.methodIcon {
+  color: var(--text-primary);
+}
+
+.method:hover .methodIcon {
+  color: var(--accent-color);
 }
 
 .formWrapper {
   flex: 1;
-  padding: 2.5rem;
-  border-radius: 24px;
+  padding: 3rem;
+  border-radius: 0px;
+  border: 1px solid var(--border-color);
 }
 
 .form {

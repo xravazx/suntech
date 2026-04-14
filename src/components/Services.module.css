@@ -39,7 +39,7 @@
 }
 
 .card:hover {
-  border-color: var(--text-primary);
+  border-color: var(--accent-color);
   background: var(--surface-color);
 }
 
@@ -54,11 +54,13 @@
   justify-content: center;
   border-radius: 0px;
   border: 1px solid var(--border-color);
+  transition: all 0.2s ease;
 }
 
 .card:hover .iconWrapper {
-  background: var(--text-primary);
+  background: var(--accent-color);
   color: var(--bg-color);
+  border-color: var(--accent-color);
 }
 
 .cardTitle {

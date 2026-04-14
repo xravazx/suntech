@@ -1,5 +1,6 @@
 import React from 'react';
 import { Zap, Shield, HeadphonesIcon } from 'lucide-react';
+import SectionMetadata from './SectionMetadata';
 import styles from './Features.module.css';
 
 const features = [

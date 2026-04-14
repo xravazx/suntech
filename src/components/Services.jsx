@@ -1,5 +1,6 @@
 import React from 'react';
 import { MonitorSmartphone, Wrench, ShieldCheck, Download, Code, Cpu } from 'lucide-react';
+import SectionMetadata from './SectionMetadata';
 import styles from './Services.module.css';
 
 const services = [

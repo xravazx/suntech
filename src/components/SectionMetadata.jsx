@@ -1,5 +1,3 @@
-import React from 'react';
-
 const SectionMetadata = ({ label = "SYST/V1.2", position = "top-left" }) => {
   const styles = {
     position: 'absolute',

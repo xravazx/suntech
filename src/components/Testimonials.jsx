@@ -1,4 +1,3 @@
-import React from 'react';
 import { User, ShieldCheck, Zap } from 'lucide-react';
 import styles from './Testimonials.module.css';
 
@@ -49,7 +48,7 @@ const Testimonials = () => {
                 <div className={styles.statusDot}></div>
               </div>
               <div className={styles.logBody}>
-                <p className={styles.text}>"{item.text}"</p>
+                <p className={styles.text}>&quot;{item.text}&quot;</p>
               </div>
               <div className={styles.logFooter}>
                 <span className={styles.timestamp}>TIMESTAMP: {new Date().toLocaleDateString()}</span>

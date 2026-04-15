@@ -1,5 +1,3 @@
-import React from 'react';
-
 const Logo = ({ className = "" }) => {
   return (
     <div className={`logo-container ${className}`} style={{ display: 'inline-flex', flexDirection: 'column', alignItems: 'center' }}>

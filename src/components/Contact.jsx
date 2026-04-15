@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { Mail, MessageCircle, Phone } from 'lucide-react';
 import styles from './Contact.module.css';
 

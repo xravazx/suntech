@@ -1,16 +1,30 @@
-import { useEffect } from 'react';
+import React, { useEffect, Suspense, lazy } from 'react';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 
 import Header from './components/Header';
 import Hero from './components/Hero';
-import Features from './components/Features';
-import Showcase from './components/Showcase';
-import Testimonials from './components/Testimonials';
-import Contact from './components/Contact';
 import Footer from './components/Footer';
 import CustomCursor from './components/CustomCursor';
-import Services from './components/Services';
+
+// Componentes de carga diferida (Lazy Loading)
+const Features = lazy(() => import('./components/Features'));
+const Showcase = lazy(() => import('./components/Showcase'));
+const Services = lazy(() => import('./components/Services'));
+const Testimonials = lazy(() => import('./components/Testimonials'));
+const Contact = lazy(() => import('./components/Contact'));
+
+const Loader = () => (
+  <div style={{ 
+    padding: '8rem 0', 
+    textAlign: 'center', 
+    color: 'var(--accent-color)', 
+    fontFamily: "'JetBrains Mono', monospace",
+    animation: 'glitch 1s infinite' 
+  }}>
+    [ CARGANDO MODULO... ]
+  </div>
+);
 
 function App() {
   useEffect(() => {
@@ -28,11 +42,13 @@ function App() {
       <Header />
       <main>
         <Hero />
-        <Features />
-        <Showcase />
-        <Services />
-        <Testimonials />
-        <Contact />
+        <Suspense fallback={<Loader />}>
+          <Features />
+          <Showcase />
+          <Services />
+          <Testimonials />
+          <Contact />
+        </Suspense>
       </main>
       <Footer />
     </>

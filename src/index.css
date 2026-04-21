@@ -48,6 +48,8 @@ body::after {
   opacity: 0.12;
   pointer-events: none;
   z-index: 9999;
+  will-change: transform;
+  transform: translateZ(0);
 }
 
 /* Scanlines Effect */

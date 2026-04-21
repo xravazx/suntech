@@ -92,6 +92,8 @@
   background: var(--accent-color);
   border-color: var(--accent-color);
   color: var(--bg-color);
+  transform: scale(1.05) translateY(-2px);
+  box-shadow: 0 10px 20px -10px rgba(255, 230, 0, 0.5);
 }
 
 .secondaryBtn {
@@ -103,6 +105,8 @@
 .secondaryBtn:hover {
   border-color: var(--accent-color);
   color: var(--accent-color);
+  transform: scale(1.05) translateY(-2px);
+  box-shadow: 0 10px 20px -10px rgba(255, 255, 255, 0.1);
 }
 
 .glow {

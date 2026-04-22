@@ -5,35 +5,31 @@ import styles from './Contact.module.css';
 const Contact = () => {
   const [status, setStatus] = useState(''); // '', 'loading', 'success', 'error'
   
-  const handleSubmit = async (e) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
-    console.log('Iniciando envío de formulario...');
+    console.log('Iniciando envío via WhatsApp...');
     setStatus('loading');
     
     const form = e.target;
-    const data = new FormData(form);
+    const formData = new FormData(form);
+    const name = formData.get('name');
+    const email = formData.get('email');
+    const message = formData.get('message');
+    
+    // Formatear el mensaje para WhatsApp
+    const text = `Hola Sun Technology! 👋\n\nMi nombre es: *${name}*\nCorreo: *${email}*\n\nConsulta:\n${message}`;
+    const encodedText = encodeURIComponent(text);
+    const whatsappUrl = `https://wa.me/529841586045?text=${encodedText}`;
     
     try {
-      const response = await fetch('https://formspree.io/f/mqaeajob', {
-        method: 'POST',
-        body: data,
-        headers: {
-          'Accept': 'application/json'
-        }
-      });
-      
-      const result = await response.json();
-      console.log('Respuesta de Formspree:', result);
-      
-      if (response.ok) {
+      // Simular un pequeño retraso para la experiencia de usuario
+      setTimeout(() => {
+        window.open(whatsappUrl, '_blank');
         setStatus('success');
         form.reset();
-      } else {
-        console.error('Error en la respuesta:', result);
-        setStatus('error');
-      }
+      }, 1000);
     } catch (error) {
-      console.error('Error al enviar el formulario:', error);
+      console.error('Error al redirigir a WhatsApp:', error);
       setStatus('error');
     }
   };
@@ -83,7 +79,7 @@ const Contact = () => {
             
             {status === 'success' && (
               <div className={`${styles.statusMessage} ${styles.success}`}>
-                ¡Mensaje enviado con éxito! Nos pondremos en contacto pronto.
+                ¡Redirigiendo a WhatsApp! Por favor, envía el mensaje en la ventana que se abrirá.
               </div>
             )}
             {status === 'error' && (

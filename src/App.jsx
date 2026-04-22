@@ -11,7 +11,6 @@ import CustomCursor from './components/CustomCursor';
 const Features = lazy(() => import('./components/Features'));
 const Showcase = lazy(() => import('./components/Showcase'));
 const Services = lazy(() => import('./components/Services'));
-const Testimonials = lazy(() => import('./components/Testimonials'));
 const Contact = lazy(() => import('./components/Contact'));
 
 const Loader = () => (
@@ -46,7 +45,6 @@ function App() {
           <Features />
           <Showcase />
           <Services />
-          <Testimonials />
           <Contact />
         </Suspense>
       </main>

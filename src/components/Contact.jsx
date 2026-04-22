@@ -7,6 +7,7 @@ const Contact = () => {
   
   const handleSubmit = async (e) => {
     e.preventDefault();
+    console.log('Iniciando envío de formulario...');
     setStatus('loading');
     
     const form = e.target;
@@ -21,13 +22,18 @@ const Contact = () => {
         }
       });
       
+      const result = await response.json();
+      console.log('Respuesta de Formspree:', result);
+      
       if (response.ok) {
         setStatus('success');
         form.reset();
       } else {
+        console.error('Error en la respuesta:', result);
         setStatus('error');
       }
     } catch (error) {
+      console.error('Error al enviar el formulario:', error);
       setStatus('error');
     }
   };

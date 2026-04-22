@@ -3,11 +3,11 @@ import styles from './Showcase.module.css';
 const projects = [
   {
     id: 'PRJ-001',
-    title: 'Infraestructura de Red',
+    title: 'Ensamblado de un Equipo',
     status: 'COMPLETE',
-    category: 'SISTEMAS',
-    description: 'Optimización de topología de red para corporativos.',
-    image: 'https://images.unsplash.com/photo-1558494949-ef010cbdcc51?q=80&w=2000&auto=format&fit=crop'
+    category: 'HARDWARE',
+    description: 'Ensamblado profesional de estaciones de trabajo de alto rendimiento.',
+    image: 'https://images.unsplash.com/photo-1591799264318-7e6ef8ddb7ea?q=80&w=2000&auto=format&fit=crop'
   },
   {
     id: 'PRJ-002',
